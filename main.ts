@@ -1,12 +1,8 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "Speed") {
-        basic.showString(name)
-        basic.showNumber(value)
-        basic.pause(100)
+        cuteBot.motors(value, value)
     } else if (name == "Yaw") {
-        basic.showString(name)
-        basic.showNumber(value)
-        basic.pause(100)
+    	
     }
 })
 radio.setGroup(1)

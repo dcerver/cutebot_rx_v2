@@ -1,12 +1,16 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "Speed") {
-        cuteBot.motors(value, value)
+        Speed = value
+        cuteBot.motors(Speed, Speed)
     } else if (name == "Yaw") {
-        if (value > 10) {
-            cuteBot.motors(value, 5)
-        } else if (value < 10) {
-            cuteBot.motors(5, Math.abs(value))
+        Yaw = value
+        if (Yaw > 10) {
+            cuteBot.motors(Yaw, 5)
+        } else if (Yaw < 10) {
+            cuteBot.motors(5, Math.abs(Yaw))
         }
     }
 })
+let Yaw = 0
+let Speed = 0
 radio.setGroup(1)
